@@ -22,6 +22,14 @@
 		30E58A1C2540BEEB003FC4BB /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A1B2540BEEB003FC4BB /* ServiceProtocol.swift */; };
 		30E58A202540BEFF003FC4BB /* StatusCodePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */; };
 		30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A232540BF2D003FC4BB /* RocketApi.swift */; };
+		30E58A292540C1D5003FC4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E58A282540C1D5003FC4BB /* Main.storyboard */; };
+		30E58A2E2540C236003FC4BB /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A2D2540C236003FC4BB /* MainNavigationController.swift */; };
+		30E58A342540C267003FC4BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A332540C267003FC4BB /* HomeViewController.swift */; };
+		30E58A382540C294003FC4BB /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A372540C294003FC4BB /* HomeContracts.swift */; };
+		30E58A3C2540C2A0003FC4BB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A3B2540C2A0003FC4BB /* HomeViewModel.swift */; };
+		30E58A402540C2AD003FC4BB /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A3F2540C2AD003FC4BB /* HomeBuilder.swift */; };
+		30E58A462540C48E003FC4BB /* LaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A452540C48E003FC4BB /* LaunchService.swift */; };
+		30E58A4A2540C54A003FC4BB /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A492540C54A003FC4BB /* LaunchModel.swift */; };
 		486B9D68D37580B44F4E5E64 /* Pods_RocketAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E697794D7F8BD78084134380 /* Pods_RocketAppTests.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
@@ -61,6 +69,14 @@
 		30E58A1B2540BEEB003FC4BB /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodePlugin.swift; sourceTree = "<group>"; };
 		30E58A232540BF2D003FC4BB /* RocketApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApi.swift; sourceTree = "<group>"; };
+		30E58A282540C1D5003FC4BB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		30E58A2D2540C236003FC4BB /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		30E58A332540C267003FC4BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		30E58A372540C294003FC4BB /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
+		30E58A3B2540C2A0003FC4BB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30E58A3F2540C2AD003FC4BB /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		30E58A452540C48E003FC4BB /* LaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchService.swift; sourceTree = "<group>"; };
+		30E58A492540C54A003FC4BB /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
 		35921DEFC440C1C0F79F079F /* Pods-RocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketApp.release.xcconfig"; path = "Target Support Files/Pods-RocketApp/Pods-RocketApp.release.xcconfig"; sourceTree = "<group>"; };
 		4563E4B8BA7B5468305DAA6F /* Pods-RocketAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RocketAppTests/Pods-RocketAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		553FC23B214047CB001D9362 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -166,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				30E58A132540BCDD003FC4BB /* ErrorModel.swift */,
+				30E58A492540C54A003FC4BB /* LaunchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,7 +190,10 @@
 		2AB31D9F1F38741400B7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30E58A282540C1D5003FC4BB /* Main.storyboard */,
+				30E58A2C2540C215003FC4BB /* MainNavigation */,
 				2A1DD4E21F38A09700712195 /* Launch */,
+				30E58A272540C1AF003FC4BB /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -260,8 +280,9 @@
 		30E58A052540BC70003FC4BB /* API */ = {
 			isa = PBXGroup;
 			children = (
-				30E58A062540BC98003FC4BB /* Protocols */,
 				30E58A232540BF2D003FC4BB /* RocketApi.swift */,
+				30E58A062540BC98003FC4BB /* Protocols */,
+				30E58A452540C48E003FC4BB /* LaunchService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -274,6 +295,25 @@
 				30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		30E58A272540C1AF003FC4BB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30E58A332540C267003FC4BB /* HomeViewController.swift */,
+				30E58A372540C294003FC4BB /* HomeContracts.swift */,
+				30E58A3B2540C2A0003FC4BB /* HomeViewModel.swift */,
+				30E58A3F2540C2AD003FC4BB /* HomeBuilder.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30E58A2C2540C215003FC4BB /* MainNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				30E58A2D2540C236003FC4BB /* MainNavigationController.swift */,
+			);
+			path = MainNavigation;
 			sourceTree = "<group>";
 		};
 		553FC239214046D0001D9362 /* Generated */ = {
@@ -380,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
+				30E58A292540C1D5003FC4BB /* Main.storyboard in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
 				2A1E77411F384BFD006C84D4 /* LaunchScreen.storyboard in Resources */,
 				2A1E773E1F384BFD006C84D4 /* Assets.xcassets in Resources */,
@@ -489,20 +530,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E58A2E2540C236003FC4BB /* MainNavigationController.swift in Sources */,
+				30E58A3C2540C2A0003FC4BB /* HomeViewModel.swift in Sources */,
+				30E58A462540C48E003FC4BB /* LaunchService.swift in Sources */,
 				30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */,
 				30E58A142540BCDD003FC4BB /* ErrorModel.swift in Sources */,
 				30E58A182540BD16003FC4BB /* Decoders.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
+				30E58A402540C2AD003FC4BB /* HomeBuilder.swift in Sources */,
 				30E58A1C2540BEEB003FC4BB /* ServiceProtocol.swift in Sources */,
+				30E58A4A2540C54A003FC4BB /* LaunchModel.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				30E58A102540BCBA003FC4BB /* ErrorProtocol.swift in Sources */,
+				30E58A342540C267003FC4BB /* HomeViewController.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
 				30E58A202540BEFF003FC4BB /* StatusCodePlugin.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
+				30E58A382540C294003FC4BB /* HomeContracts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
