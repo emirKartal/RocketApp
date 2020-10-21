@@ -16,6 +16,12 @@
 		2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9222811F38797600A648E6 /* ConfigurationManager.swift */; };
 		2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEE6D31F38828A00531205 /* Configuration.plist */; };
 		2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEE6D51F3886D700531205 /* RootRouter.swift */; };
+		30E58A102540BCBA003FC4BB /* ErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A0F2540BCBA003FC4BB /* ErrorProtocol.swift */; };
+		30E58A142540BCDD003FC4BB /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A132540BCDD003FC4BB /* ErrorModel.swift */; };
+		30E58A182540BD16003FC4BB /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A172540BD16003FC4BB /* Decoders.swift */; };
+		30E58A1C2540BEEB003FC4BB /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A1B2540BEEB003FC4BB /* ServiceProtocol.swift */; };
+		30E58A202540BEFF003FC4BB /* StatusCodePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */; };
+		30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A232540BF2D003FC4BB /* RocketApi.swift */; };
 		486B9D68D37580B44F4E5E64 /* Pods_RocketAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E697794D7F8BD78084134380 /* Pods_RocketAppTests.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
@@ -49,6 +55,12 @@
 		2A9222841F387B1D00A648E6 /* RocketAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		2ABEE6D31F38828A00531205 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		2ABEE6D51F3886D700531205 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		30E58A0F2540BCBA003FC4BB /* ErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProtocol.swift; sourceTree = "<group>"; };
+		30E58A132540BCDD003FC4BB /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		30E58A172540BD16003FC4BB /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
+		30E58A1B2540BEEB003FC4BB /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodePlugin.swift; sourceTree = "<group>"; };
+		30E58A232540BF2D003FC4BB /* RocketApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApi.swift; sourceTree = "<group>"; };
 		35921DEFC440C1C0F79F079F /* Pods-RocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketApp.release.xcconfig"; path = "Target Support Files/Pods-RocketApp/Pods-RocketApp.release.xcconfig"; sourceTree = "<group>"; };
 		4563E4B8BA7B5468305DAA6F /* Pods-RocketAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RocketAppTests/Pods-RocketAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		553FC23B214047CB001D9362 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -130,6 +142,7 @@
 			children = (
 				C90395231FC622D2006F1DC0 /* main.swift */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
+				30E58A052540BC70003FC4BB /* API */,
 				2AFB31021F3853C6009C4586 /* Resources */,
 				2AFB31071F38542E009C4586 /* SupportingFiles */,
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
@@ -152,6 +165,7 @@
 		2AB31D9E1F38740A00B7D1F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30E58A132540BCDD003FC4BB /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +207,7 @@
 				2A9222811F38797600A648E6 /* ConfigurationManager.swift */,
 				2A1DD4DE1F389C2200712195 /* DeeplinkHandler.swift */,
 				2A1DD4E01F389E2100712195 /* NotificationsHandler.swift */,
+				30E58A172540BD16003FC4BB /* Decoders.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -240,6 +255,25 @@
 				2AB31DA31F38744C00B7D1F3 /* Utilities */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30E58A052540BC70003FC4BB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				30E58A062540BC98003FC4BB /* Protocols */,
+				30E58A232540BF2D003FC4BB /* RocketApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		30E58A062540BC98003FC4BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30E58A0F2540BCBA003FC4BB /* ErrorProtocol.swift */,
+				30E58A1B2540BEEB003FC4BB /* ServiceProtocol.swift */,
+				30E58A1F2540BEFF003FC4BB /* StatusCodePlugin.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		553FC239214046D0001D9362 /* Generated */ = {
@@ -455,12 +489,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */,
+				30E58A142540BCDD003FC4BB /* ErrorModel.swift in Sources */,
+				30E58A182540BD16003FC4BB /* Decoders.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
+				30E58A1C2540BEEB003FC4BB /* ServiceProtocol.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
+				30E58A102540BCBA003FC4BB /* ErrorProtocol.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
+				30E58A202540BEFF003FC4BB /* StatusCodePlugin.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
 			);
