@@ -10,6 +10,9 @@ inhibit_all_warnings!
 target 'RocketApp' do
 
   pod 'R.swift', '5.0.0'
+  pod 'Moya', '~> 14.0'
+  pod 'ReachabilitySwift'
+  pod 'Kingfisher', '~> 5.15'
 
   target 'RocketAppTests' do
     inherit! :search_paths
