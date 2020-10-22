@@ -17,6 +17,7 @@ struct LaunchModel: Codable {
     var rocket: RocketModel?
     var launchFailureDetails: LaunchFailureDetailModel?
     var launchSite: LaunchSite?
+    var details: String?
     
 }
 

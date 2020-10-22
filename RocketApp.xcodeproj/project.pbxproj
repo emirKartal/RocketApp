@@ -32,6 +32,10 @@
 		30E58A4A2540C54A003FC4BB /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A492540C54A003FC4BB /* LaunchModel.swift */; };
 		30E58A4E2541E7D8003FC4BB /* RocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A4D2541E7D7003FC4BB /* RocketModel.swift */; };
 		30E58A532541F5B4003FC4BB /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A522541F5B4003FC4BB /* LaunchTableViewCell.swift */; };
+		30E58A60254206F3003FC4BB /* RocketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A5F254206F3003FC4BB /* RocketDetailViewController.swift */; };
+		30E58A6C25420730003FC4BB /* RocketDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A6B25420730003FC4BB /* RocketDetailContracts.swift */; };
+		30E58A7025420740003FC4BB /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A6F25420740003FC4BB /* RocketDetailViewModel.swift */; };
+		30E58A7425420751003FC4BB /* RocketDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A7325420751003FC4BB /* RocketDetailBuilder.swift */; };
 		486B9D68D37580B44F4E5E64 /* Pods_RocketAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E697794D7F8BD78084134380 /* Pods_RocketAppTests.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
@@ -81,6 +85,10 @@
 		30E58A492540C54A003FC4BB /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
 		30E58A4D2541E7D7003FC4BB /* RocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketModel.swift; sourceTree = "<group>"; };
 		30E58A522541F5B4003FC4BB /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
+		30E58A5F254206F3003FC4BB /* RocketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewController.swift; sourceTree = "<group>"; };
+		30E58A6B25420730003FC4BB /* RocketDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailContracts.swift; sourceTree = "<group>"; };
+		30E58A6F25420740003FC4BB /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
+		30E58A7325420751003FC4BB /* RocketDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailBuilder.swift; sourceTree = "<group>"; };
 		35921DEFC440C1C0F79F079F /* Pods-RocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketApp.release.xcconfig"; path = "Target Support Files/Pods-RocketApp/Pods-RocketApp.release.xcconfig"; sourceTree = "<group>"; };
 		4563E4B8BA7B5468305DAA6F /* Pods-RocketAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RocketAppTests/Pods-RocketAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		553FC23B214047CB001D9362 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 				30E58A2C2540C215003FC4BB /* MainNavigation */,
 				2A1DD4E21F38A09700712195 /* Launch */,
 				30E58A272540C1AF003FC4BB /* Home */,
+				30E58A58254206B0003FC4BB /* Details */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -328,6 +337,17 @@
 				30E58A522541F5B4003FC4BB /* LaunchTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		30E58A58254206B0003FC4BB /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				30E58A5F254206F3003FC4BB /* RocketDetailViewController.swift */,
+				30E58A6B25420730003FC4BB /* RocketDetailContracts.swift */,
+				30E58A6F25420740003FC4BB /* RocketDetailViewModel.swift */,
+				30E58A7325420751003FC4BB /* RocketDetailBuilder.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		553FC239214046D0001D9362 /* Generated */ = {
@@ -551,17 +571,21 @@
 				30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */,
 				30E58A142540BCDD003FC4BB /* ErrorModel.swift in Sources */,
 				30E58A182540BD16003FC4BB /* Decoders.swift in Sources */,
+				30E58A7025420740003FC4BB /* RocketDetailViewModel.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				30E58A402540C2AD003FC4BB /* HomeBuilder.swift in Sources */,
 				30E58A1C2540BEEB003FC4BB /* ServiceProtocol.swift in Sources */,
 				30E58A4A2540C54A003FC4BB /* LaunchModel.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
+				30E58A7425420751003FC4BB /* RocketDetailBuilder.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
+				30E58A6C25420730003FC4BB /* RocketDetailContracts.swift in Sources */,
 				30E58A4E2541E7D8003FC4BB /* RocketModel.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				30E58A102540BCBA003FC4BB /* ErrorProtocol.swift in Sources */,
 				30E58A342540C267003FC4BB /* HomeViewController.swift in Sources */,
+				30E58A60254206F3003FC4BB /* RocketDetailViewController.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
 				30E58A202540BEFF003FC4BB /* StatusCodePlugin.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,

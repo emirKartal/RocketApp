@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
 
         viewModel.getLaunches(offset: 0)
     }
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -35,8 +34,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.launchCell, for: indexPath)!
         let launch = launchList[indexPath.row]
-        cell.launchNameLabel.text = "\(launch.flightNumber!)"
+        cell.populateCell(with: launch)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let rocketId = launchList[indexPath.row].flightNumber {
+            viewModel.selectRocket(rocketId: rocketId)
+        }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -59,6 +64,14 @@ extension HomeViewController: HomeViewModelDelegate {
             break
         case .showError(let error):
             break
+        }
+    }
+    
+    func navigate(to route: HomeRouter) {
+        switch route {
+        case .toRocketDetail(let viewModel):
+            let rocketDetailVC = RocketDetailBuilder.make(viewModel: viewModel)
+            self.navigationController?.pushViewController(rocketDetailVC, animated: true)
         }
     }
 }

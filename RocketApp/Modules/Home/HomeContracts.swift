@@ -13,14 +13,20 @@ protocol HomeViewModelProtocol {
     var launchCount: Int? {get}
     func getLaunches(offset: Int)
     func getNextPage()
+    func selectRocket(rocketId: Int)
 }
 
 protocol HomeViewModelDelegate: class {
     func handleHomeViewModelOutput(_ output: HomeViewModelOutput)
+    func navigate(to route: HomeRouter)
 }
 
 enum HomeViewModelOutput {
     case isLoading(Bool)
     case showLaunchList([LaunchModel])
     case showError(String)
+}
+
+enum HomeRouter {
+    case toRocketDetail(RocketDetailViewModelProtocol)
 }

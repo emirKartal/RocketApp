@@ -46,6 +46,11 @@ final class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
+    func selectRocket(rocketId: Int) {
+        let viewModel = RocketDetailViewModel(rocketId: rocketId)
+        delegate?.navigate(to: .toRocketDetail(viewModel))
+    }
+    
     private func notify(_ output: HomeViewModelOutput) {
         delegate?.handleHomeViewModelOutput(output)
     }
