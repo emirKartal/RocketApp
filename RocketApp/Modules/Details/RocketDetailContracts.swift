@@ -10,7 +10,8 @@ import Foundation
 
 protocol RocketDetailViewModelProtocol {
     var delegate: RocketDetailViewModelDelegate? {get set}
-    var rocketId: Int {get}
+    var rocketId: String {get}
+    func getRocketDetail()
 }
 
 protocol RocketDetailViewModelDelegate: class {
@@ -19,5 +20,6 @@ protocol RocketDetailViewModelDelegate: class {
 
 enum RocketDetailViewModelOutput {
     case isLoading(Bool)
+    case showDetail(RocketDetailModel)
     case showError(String)
 }

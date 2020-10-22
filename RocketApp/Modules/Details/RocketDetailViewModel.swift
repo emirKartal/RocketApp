@@ -10,10 +10,28 @@ import Foundation
 
 final class RocketDetailViewModel: RocketDetailViewModelProtocol {
     weak var delegate: RocketDetailViewModelDelegate?
-    var rocketId: Int
+    private var service: LaunchService!
+    var rocketId: String
     
-    init(rocketId: Int) {
+    init(isMock: Bool = false, rocketId: String) {
         self.rocketId = rocketId
+        self.service = LaunchService(isMock: isMock)
+    }
+    
+    func getRocketDetail() {
+        notify(.isLoading(true))
+        service.getRocket(rocketId: self.rocketId) { [weak self] (result) in
+            guard let self = self else {return}
+            self.notify(.isLoading(false))
+            switch result {
+            case .success(let rocket):
+                self.notify(.showDetail(rocket))
+                break
+            case .failure(let error):
+                self.notify(.showError(error.localizedDescription))
+                break
+            }
+        }
     }
     
     private func notify(_ output: RocketDetailViewModelOutput) {

@@ -39,7 +39,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let rocketId = launchList[indexPath.row].flightNumber {
+        if let rocketId = launchList[indexPath.row].rocket?.rocketId {
             viewModel.selectRocket(rocketId: rocketId)
         }
     }
@@ -49,14 +49,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.getNextPage()
         }
     }
-    
-    
 }
 
 extension HomeViewController: HomeViewModelDelegate {
     func handleHomeViewModelOutput(_ output: HomeViewModelOutput) {
         switch output {
         case .isLoading(let isLoading):
+            isLoading ? Spinner.start() : Spinner.stop()
             break
         case .showLaunchList(let launchList):
             self.launchList = launchList

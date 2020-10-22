@@ -36,6 +36,9 @@
 		30E58A6C25420730003FC4BB /* RocketDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A6B25420730003FC4BB /* RocketDetailContracts.swift */; };
 		30E58A7025420740003FC4BB /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A6F25420740003FC4BB /* RocketDetailViewModel.swift */; };
 		30E58A7425420751003FC4BB /* RocketDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A7325420751003FC4BB /* RocketDetailBuilder.swift */; };
+		30E58A78254216C2003FC4BB /* RocketDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A77254216C2003FC4BB /* RocketDetailModel.swift */; };
+		30E58A7C25422112003FC4BB /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A7B25422112003FC4BB /* Spinner.swift */; };
+		30E58A8025422178003FC4BB /* UIViewControlllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58A7F25422178003FC4BB /* UIViewControlllerExtension.swift */; };
 		486B9D68D37580B44F4E5E64 /* Pods_RocketAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E697794D7F8BD78084134380 /* Pods_RocketAppTests.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
@@ -89,6 +92,9 @@
 		30E58A6B25420730003FC4BB /* RocketDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailContracts.swift; sourceTree = "<group>"; };
 		30E58A6F25420740003FC4BB /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
 		30E58A7325420751003FC4BB /* RocketDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailBuilder.swift; sourceTree = "<group>"; };
+		30E58A77254216C2003FC4BB /* RocketDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailModel.swift; sourceTree = "<group>"; };
+		30E58A7B25422112003FC4BB /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		30E58A7F25422178003FC4BB /* UIViewControlllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControlllerExtension.swift; sourceTree = "<group>"; };
 		35921DEFC440C1C0F79F079F /* Pods-RocketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketApp.release.xcconfig"; path = "Target Support Files/Pods-RocketApp/Pods-RocketApp.release.xcconfig"; sourceTree = "<group>"; };
 		4563E4B8BA7B5468305DAA6F /* Pods-RocketAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RocketAppTests/Pods-RocketAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		553FC23B214047CB001D9362 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				30E58A132540BCDD003FC4BB /* ErrorModel.swift */,
 				30E58A492540C54A003FC4BB /* LaunchModel.swift */,
 				30E58A4D2541E7D7003FC4BB /* RocketModel.swift */,
+				30E58A77254216C2003FC4BB /* RocketDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				2A1DD4DE1F389C2200712195 /* DeeplinkHandler.swift */,
 				2A1DD4E01F389E2100712195 /* NotificationsHandler.swift */,
 				30E58A172540BD16003FC4BB /* Decoders.swift */,
+				30E58A7B25422112003FC4BB /* Spinner.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 		2AB31DA41F38745300B7D1F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				30E58A7F25422178003FC4BB /* UIViewControlllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -566,7 +575,9 @@
 			files = (
 				30E58A2E2540C236003FC4BB /* MainNavigationController.swift in Sources */,
 				30E58A3C2540C2A0003FC4BB /* HomeViewModel.swift in Sources */,
+				30E58A78254216C2003FC4BB /* RocketDetailModel.swift in Sources */,
 				30E58A462540C48E003FC4BB /* LaunchService.swift in Sources */,
+				30E58A7C25422112003FC4BB /* Spinner.swift in Sources */,
 				30E58A532541F5B4003FC4BB /* LaunchTableViewCell.swift in Sources */,
 				30E58A242540BF2D003FC4BB /* RocketApi.swift in Sources */,
 				30E58A142540BCDD003FC4BB /* ErrorModel.swift in Sources */,
@@ -582,6 +593,7 @@
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				30E58A6C25420730003FC4BB /* RocketDetailContracts.swift in Sources */,
 				30E58A4E2541E7D8003FC4BB /* RocketModel.swift in Sources */,
+				30E58A8025422178003FC4BB /* UIViewControlllerExtension.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				30E58A102540BCBA003FC4BB /* ErrorProtocol.swift in Sources */,
 				30E58A342540C267003FC4BB /* HomeViewController.swift in Sources */,

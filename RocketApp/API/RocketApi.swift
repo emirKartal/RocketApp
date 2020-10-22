@@ -11,7 +11,7 @@ import Moya
 
 enum RocketApi {
     case getLaunches(limit: Int, offset: Int)
-    
+    case getRocket(id: String)
 }
 
 extension RocketApi: TargetType {
@@ -21,12 +21,14 @@ extension RocketApi: TargetType {
         switch self {
         case .getLaunches:
             return "v3/launches"
+        case .getRocket(let id):
+            return "v3/rockets/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getLaunches:
+        case .getLaunches, .getRocket:
             return .get
         }
     }
@@ -40,6 +42,8 @@ extension RocketApi: TargetType {
         case .getLaunches(let limit, let offset):
             let parameters: [String: Any] = ["limit": limit, "offset":offset]
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+        case .getRocket:
+            return .requestPlain
         }
     }
     

@@ -46,7 +46,7 @@ final class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
-    func selectRocket(rocketId: Int) {
+    func selectRocket(rocketId: String) {
         let viewModel = RocketDetailViewModel(rocketId: rocketId)
         delegate?.navigate(to: .toRocketDetail(viewModel))
     }

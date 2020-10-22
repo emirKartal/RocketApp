@@ -41,4 +41,22 @@ class LaunchService: ServiceProtocol {
             }
         }
     }
+    
+    func getRocket(rocketId: String, completion: @escaping(Result<RocketDetailModel, APIError>)->()) {
+        self.provider.request(.getRocket(id: rocketId)) { (result) in
+            switch result {
+            case .success(let response):
+                do {
+                    let rocketDetail = try Decoders.mainDecoder.decode(RocketDetailModel.self, from: response.data)
+                    completion(.success(rocketDetail))
+                }catch {
+                    print(error)
+                    completion(.failure(.parseError))
+                }
+                break
+            case .failure(let error):
+                break
+            }
+        }
+    }
 }

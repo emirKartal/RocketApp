@@ -13,7 +13,7 @@ protocol HomeViewModelProtocol {
     var launchCount: Int? {get}
     func getLaunches(offset: Int)
     func getNextPage()
-    func selectRocket(rocketId: Int)
+    func selectRocket(rocketId: String)
 }
 
 protocol HomeViewModelDelegate: class {
