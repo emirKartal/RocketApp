@@ -18,5 +18,5 @@ public enum Decoders {
         return decoder
     }()
     
-    public static let dateFormat = "yyyy-MM-dd" //2020-07-31
+    public static let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" //"2006-03-24T22:30:00.000Z"
 }

@@ -10,7 +10,9 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     var delegate: HomeViewModelDelegate? {get set}
-    func getLaunches()
+    var launchCount: Int? {get}
+    func getLaunches(offset: Int)
+    func getNextPage()
 }
 
 protocol HomeViewModelDelegate: class {
@@ -19,5 +21,6 @@ protocol HomeViewModelDelegate: class {
 
 enum HomeViewModelOutput {
     case isLoading(Bool)
+    case showLaunchList([LaunchModel])
     case showError(String)
 }

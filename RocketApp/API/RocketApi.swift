@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum RocketApi {
-    case getLaunches
+    case getLaunches(limit: Int, offset: Int)
     
 }
 
@@ -37,8 +37,9 @@ extension RocketApi: TargetType {
     
     var task: Task {
         switch self {
-        case .getLaunches:
-            return .requestPlain
+        case .getLaunches(let limit, let offset):
+            let parameters: [String: Any] = ["limit": limit, "offset":offset]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         }
     }
     

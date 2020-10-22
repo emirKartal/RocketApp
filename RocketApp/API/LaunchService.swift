@@ -20,14 +20,15 @@ class LaunchService: ServiceProtocol {
         }
     }
     
-    func getLaunches(completion: @escaping(Result<[LaunchModel], APIError>)-> ()) {
-        self.provider.request(.getLaunches) { (result) in
+    func getLaunches(limit: Int, offset: Int, completion: @escaping(Result<([LaunchModel], Int), APIError>)-> ()) {
+        self.provider.request(.getLaunches(limit: limit, offset: offset)) { (result) in
             switch result {
             case .success(let response):
                 do {
                     let launchList = try Decoders.mainDecoder.decode([LaunchModel].self, from: response.data)
-                    print(launchList.first?.missionName)
-                    completion(.success(launchList))
+                    let launchCountString = response.response?.allHeaderFields["spacex-api-count"] as? String
+                    let launchCount = Int(launchCountString!)
+                    completion(.success((launchList, launchCount!)))
                 }catch {
                     print(error)
                     completion(.failure(.parseError))
